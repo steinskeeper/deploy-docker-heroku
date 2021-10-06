@@ -1,0 +1,27 @@
+{
+  "name": "deploy-docker-heroku",
+  "version": "0.0.1",
+  "description": "A simple action to deploy container to Heroku Container Registry",
+  "main": "index.js",
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx @zeit/ncc build index.js && git add ."
+    }
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "heroku",
+    "deploy",
+    "container",
+    "docker"
+  ],
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5"
+  }
+}
